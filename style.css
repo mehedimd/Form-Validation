@@ -17,6 +17,7 @@
     border-radius: 10px;
     padding: 20px 40px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
 }
 
 .header{
@@ -81,6 +82,22 @@
     border: 1px solid blueviolet;
     cursor: pointer;
 }
+
+@media only screen and (max-width:575px){
+    .container{
+
+        width: 350px;
+
+    
+    }
+}
+@media only screen and (max-width:280px){
+    .container{
+
+        width: 270px;
+
+    
+    }
 
 
 /* successfull page  */
