@@ -8,10 +8,6 @@ form.addEventListener('submit',function(e){
     e.preventDefault();
 
     checkInput();
-    username.value = "";
-    password.value = '';
-    confirmpassword.value = '';
-    email.value = "";
 })
 
 function checkInput(){
