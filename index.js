@@ -68,3 +68,42 @@ function successMessage(input){
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 };
+
+//---password show hide
+let show = document.querySelector('.bx-show');
+let hide = document.querySelector('.bx-hide');
+
+    show.addEventListener('click', function(e){
+        password.type ="text";
+        let myParent = password.parentElement;
+            myParent.className = "form-control hide"
+
+    });
+
+    hide.addEventListener('click', function(e){
+        password.type ="password";
+        let myParent = password.parentElement;
+            myParent.className = "form-control show"
+    
+
+    });
+
+    //----confirm pass hide
+    let showConfirm = document.querySelector('#confirmShow');
+    let hideConfirm = document.querySelector('#confirmHide');
+
+    showConfirm.addEventListener('click', function(e){
+        confirmpassword.type ="text";
+        let myParent = confirmpassword.parentElement;
+            myParent.className = "form-control hide"
+
+    });
+
+    hideConfirm.addEventListener('click', function(e){
+        confirmpassword.type ="password";
+        let myParent = confirmpassword.parentElement;
+            myParent.className = "form-control show"
+    
+
+    });
+    

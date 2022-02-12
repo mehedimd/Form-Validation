@@ -22,6 +22,8 @@
 
 .header{
     margin-bottom: 20px;
+    text-align: center;
+    color: blueviolet;
 }
 .form-control{
     margin-bottom: 20px;
@@ -48,13 +50,32 @@
 .form-control.error input{
     border: 2px solid red;
 }
-.form-control i{
+.form-control .bxs-alarm-exclamation,.bxs-check-circle{
     visibility: hidden;
     position: absolute;
     right: 10px;
     top: 40px;
 }
-.form-control.success .bxs-check-circle{
+
+.form-control .bx-show,.bx-hide{
+    position: absolute;
+    right: 28px;
+    top: 38px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.form-control .bx-hide{
+    visibility: hidden;
+}
+
+.form-control.hide .bx-hide{
+    visibility: visible;
+}
+.form-control.hide .bx-show{
+    visibility: hidden;
+}
+
+.form-control.success .bxs-check-circle,.bx-show,.bx-hide{
     visibility: visible;
     color: green;
 }
