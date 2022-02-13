@@ -119,13 +119,22 @@
 
     
     }
+}
 
-
-/* successfull page  */
-/* #successbody{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    min-height: 100vh;
-    background-color: rgb(60, 160, 248);
-} */
+/* strong password  */
+#stongPassword{
+    font-size: 14px;
+    margin-top: 8px;
+}
+.stongPassword.weak{
+    color: rgb(235, 20, 20);
+}
+.stongPassword.vweak{
+    color: rgb(226, 157, 29);
+}
+.stongPassword.strong{
+    color: rgb(15, 161, 23);
+}
+.stongPassword.vstrong{
+    color: rgb(24, 27, 236);
+}

@@ -1,3 +1,4 @@
+
 let form = document.querySelector("#form");
 let username = form['username'];
 let email    = form['email'];
@@ -8,6 +9,8 @@ form.addEventListener('submit',function(e){
     e.preventDefault();
 
     checkInput();
+
+
 })
 
 function checkInput(){
@@ -15,6 +18,8 @@ function checkInput(){
     let emailValue    = email.value.trim();
     let passwordValue    = password.value.trim();
     let confirmpasswordValue    = confirmpassword.value.trim();
+
+
 
     if(usernameValue === ''){
         errorMessage(username,"Username can't Be blank");
@@ -49,6 +54,7 @@ function checkInput(){
     else{
         successMessage(confirmpassword);
     }
+
 }
 
 function errorMessage(input, msg){
@@ -106,4 +112,38 @@ let hide = document.querySelector('.bx-hide');
     
 
     });
+
+
+
+    // password stronger
+
+    password.addEventListener('keyup',function(e){
+        let input = e.target.value;
+        console.log(input)
+        let stongPassword = document.querySelector('#stongPassword');
+        // //password strong
+                
+            if(input.match(/[a-z]+/) && input.match(/[A-Z]+/) && input.match(/[$@#&!]+/) && input.match(/[0-9]+/)){    
+                stongPassword.innerText = "Very Strong Password";
+                stongPassword.className = "stongPassword vstrong"
+            }
+            else  if((input.match(/[a-z]+/) && input.match(/[A-Z]+/) && input.match(/[$@#&!]+/)) || (input.match(/[0-9]+/) && input.match(/[A-Z]+/) && input.match(/[$@#&!]+/)) || (input.match(/[a-z]+/) && input.match(/[0-9]+/) && input.match(/[$@#&!]+/)) || (input.match(/[a-z]+/) && input.match(/[A-Z]+/) && input.match(/[0-9]+/))){    
+                stongPassword.innerText = "Strong Password"
+                stongPassword.className = "stongPassword strong"
+            }
+            else  if((input.match(/[a-z]+/) && input.match(/[A-Z]+/)) || (input.match(/[$@#&!]+/) && input.match(/[a-z]+/)) || (input.match(/[0-9]+/) && input.match(/[a-z]+/)) || (input.match(/[$@#&!]+/) && input.match(/[A-Z]+/)) || (input.match(/[$@#&!]+/) && input.match(/[0-9]+/)) || (input.match(/[A-Z]+/) && input.match(/[0-9]+/))){    
+                stongPassword.innerText = "Nearby Strong Password ";
+                stongPassword.className = "stongPassword weak"
+            }
+            else if(input.match(/[a-z]+/) || input.match(/[A-Z]+/) || input.match(/[$@#&!]+/) || input.match(/[0-9]+/)){
+                stongPassword.innerText = " Weeak Password "
+                stongPassword.className = "stongPassword vweak"
+            }
+            else{
+                stongPassword.innerText = ""
+            }
+            
+    })
     
+
+
